@@ -1,0 +1,29 @@
+<!-- <div *ngIf="noOfContactFields.length==1">
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="">Phone No :</label>
+            <input [(ngModel)]="contact.phone" type="text" class="form-control">
+        </div>          
+    </div>
+</div> -->
+
+<div >
+<div class="row" *ngFor="let contact of noOfContactFields">
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="">Phone No :</label>
+            <input [(ngModel)]="contact.phone" type="text" class="form-control">
+        </div> 
+    </div>
+        <div class="col-md-6" *ngIf="noOfContactFields.length>1">    
+            <button (click)="onDelete(contact.id)" class="btn btn-danger" style="margin-right:30px;">Delete phone No</button>  
+        </div>
+    
+</div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+    <button (click)="onAdd()" class="btn btn-primary" style="margin-right:30px;">Add another phone No</button>
+    <button (click)="onSubmit()" class="btn btn-danger" style="float: right;">Submit</button>        
+    </div>
+</div>

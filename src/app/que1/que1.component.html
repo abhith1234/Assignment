@@ -1,0 +1,19 @@
+
+<p *ngFor="let no of series"> {{no}} 
+</p>
+
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group">
+            <!-- <label for="">Car Name</label> -->
+            <input [(ngModel)]="userAns" placeholder="Enter Your Answer" type="text" class="form-control">
+        </div>          
+    </div>
+    
+    <div class="col-md-6">
+        <button (click)="onSubmit()" class="btn btn-primary" style="margin-right:30px;">Submit any index</button>          
+    </div>
+
+    <h1>Number at {{userAns}} index is {{ans}} </h1>
+</div>
